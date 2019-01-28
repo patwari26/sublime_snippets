@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[
+vi BIT(N);
+void update(ll x,ll val)
+{
+	for(;x<=n;x+=(x&-x))
+		BIT[x]+=val;
+}
+ll query(ll x)
+{
+	ll res=0;
+	for(;x>0;x-=(x&-x))
+		res+=BIT[x];
+	return res;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>BIT</tabTrigger> 
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

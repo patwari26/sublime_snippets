@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+ll add(ll a,ll b,ll mod)
+{
+	return ((a%mod)+(b%mod))%mod;
+}
+ll sub(ll a,ll b,ll mod)
+{
+	return ((a%mod)+(b%mod)+mod)%mod;
+}
+ll mul(ll a,ll b,ll mod)
+{
+	return ((a%mod)*(b%mod))%mod;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>modulo</tabTrigger> 
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
