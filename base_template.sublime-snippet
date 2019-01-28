@@ -1,7 +1,14 @@
 <snippet>
 	<content><![CDATA[
 //You are the SEMICOLON to My STATEMENTS;
-//author:Patwari26
+/* 
+ ____       _                      _ ____   __   
+|  _ \ __ _| |___      ____ _ _ __(_)___ \ / /_  
+| |_) / _` | __\ \ /\ / / _` | '__| | __) | '_ \ 
+|  __/ (_| | |_ \ V  V / (_| | |  | |/ __/| (_) |
+|_|   \__,_|\__| \_/\_/ \__,_|_|  |_|_____|\___/ 
+
+*/
 #include<bits/stdc++.h>
 
 #define ll          long long
