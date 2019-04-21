@@ -1,0 +1,36 @@
+<snippet>
+	<content><![CDATA[
+ll  num[2][2000]; // two numbers num[0]>=num[1]
+ll DP[2005][2][2];
+ll call(ll pos,ll f1,ll f2){
+    if(pos == 2000){
+      if() return 1; // end condition 
+      else return 0;
+    }
+    if(DP[pos][f1][f2] != -1) return DP[pos][f1][f2];
+    ll res = 0;
+    ll LMT = f1?9:num[0][pos];
+    ll ST = f2?0:num[1][pos];
+    rep(dgt,ST,LMT+1){ 
+            res = (res+call(pos+1,f1||(dgt<LMT),f2||(dgt>ST)));
+    }
+    return DP[pos][f1][f2] = res;
+}
+ll solve(ll a[2]){ 
+    rep(i,0,2){
+        rep(j,0,20){
+            num[i][j]=a[i]%10;
+            a[i]/=10;
+        }
+        reverse(num[i],num[i]+2000);
+    }
+    memset(DP, -1, sizeof(DP));
+    return call(0, 0, 0);
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+	<tabTrigger>digit_dp</tabTrigger>
+</snippet>

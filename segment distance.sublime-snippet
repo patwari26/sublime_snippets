@@ -1,11 +1,13 @@
 <snippet>
 	<content><![CDATA[
-ll add(ll x,ll y,ll mod) { x += y; if(x >= mod) x -= mod; return x;}
-ll sub(ll x,ll y,ll mod) { x -= y; if(x < 0) x += mod; return x;}
-ll mul(ll x,ll y,ll mod) { return (x * 1ll * y) % mod;}
+double segDist(P& s, P& e, P& p) {
+    if (s==e) return (p-s).dist();
+    auto d = (e-s).dist2(), t = min(d,max(.0,(p-s).dot(e-s)));
+    return ((p-s)*d-(e-s)*t).dist()/d;
+}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>mod operations</tabTrigger>
+	<tabTrigger>segment_dist</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<!-- <scope>source.python</scope> -->
 </snippet>
